@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sovereign-beige: #f5f5dc;
+}
+
+body {
+  background-color: #f9f8f6;
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* Matching your elite aesthetic */
+}
