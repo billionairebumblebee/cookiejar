@@ -33,4 +33,8 @@ npm run dev
 
 ```
 ### 💡 Why this exists?
+<<<<<<< HEAD
 Standard portfolios are static. **The Cookie Jar** is a test of curiosity. It rewards the user for digging deeper, turning a "recruiter scan" into a "product discovery" session. It proves that as an Architect, I don't just build systems that work—I build systems that **resonate**.
+=======
+Standard portfolios are static. **The Cookie Jar** is a test of curiosity. It rewards the user for digging deeper, turning a "recruiter scan" into a "product discovery" session. It proves that as an Architect, I don't just build systems that work—I build systems that **resonate**.
+>>>>>>> fbd0631bb3dc3f9544e51ee05b18f512984617d5
