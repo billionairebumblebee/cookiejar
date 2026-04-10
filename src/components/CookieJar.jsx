@@ -82,13 +82,13 @@ const scaleBases = [523.25, 783.99, 1174.66, 1760.00, 2637.02];
 const majorIntervals = [0, 2, 4, 5, 7, 9, 11];
 
 const initialCookies = [
-  { id: 'heist', title: 'TOKEN HEIST', stats: '2.7M Tokens • $60/Day saved', backColor: '#2A1B0E', highlight: true, startX: "25%", startY: "25%" },
+  { id: 'heist', title: 'TOKEN HEIST', stats: '4 Projects • 2.7M Tokens • RESITRCTED by Gemini Free API key page', backColor: '#2A1B0E', highlight: true, startX: "25%", startY: "25%" },
   { id: 'sci', title: 'SCIENCE OLYMPIAD', stats: '🥇 Multiple Golds • 12+ Medals', backColor: '#1A0F05', startX: "75%", startY: "25%" },
-  { id: 'oski', title: 'OSKI', stats: '98% Accuracy • IoT Build', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
-  { id: 'dm', title: 'DM ME', stats: '12k Users • Viral Growth', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
-  { id: 'foozi', title: 'FOOZI AI', stats: 'Autonomous Sovereign Entity', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true }, 
-  { id: 'forge', title: 'ETSY FORGE', stats: 'Dev-Productivity Launch', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
-  { id: 'agents', title: 'THE HIVE', stats: 'Multi-Agent Infra', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
+  { id: 'oski', title: 'OSKI SORTING TRASH CAN', stats: 'CAD • Arduino • 3D Printing • IoT', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
+  { id: 'content', title: 'CONTENT CREATION', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
+  { id: 'foozi', title: 'FOOZI / OPENCLAW', stats: 'Built in 2 Weeks • Portfolio Portal', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true }, 
+  { id: 'pcg', title: 'PCG STARTUP PROJECTS', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
+  { id: 'byoglo', title: 'BYOGLO', stats: 'Prototype • Packaging • Pricing', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
 ];
 
 export default function CookieJar() {
@@ -142,8 +142,8 @@ export default function CookieJar() {
         <div className="relative w-full h-[15vh] mb-[-2vh] z-[1000] flex flex-col items-center justify-end pointer-events-none">
            <div className="w-[10vw] max-w-[100px] h-[5vh] rounded-t-full bg-white/20 border-t-2 border-x-2 border-white/30 mb-[-2px]" />
            <div className="relative w-full h-[12vh] rounded-t-[4vw] bg-white/10 border-x-[1vw] border-t-[1vw] border-white/40 shadow-2xl backdrop-blur-3xl flex flex-col items-center justify-center px-4">
-              <h1 className="text-[5vw] md:text-[4vw] lg:text-[3.5rem] font-black tracking-tighter uppercase leading-none drop-shadow-2xl">VIVIAN YANG</h1>
-              <span className="text-[1.5vw] md:text-[1vw] lg:text-[0.7rem] font-bold tracking-[0.5em] text-stone-400 uppercase mt-[1vh]">Billionaire Bumblebee</span>
+              <h1 className="text-[5vw] md:text-[4vw] lg:text-[3.5rem] font-semibold tracking-tight uppercase leading-none drop-shadow-2xl">VIVIAN YANG</h1>
+              <span className="text-[1.5vw] md:text-[1vw] lg:text-[0.7rem] font-medium tracking-[0.35em] text-stone-300 uppercase mt-[1vh]">Billionaire Bumblebee</span>
            </div>
         </div>
 
@@ -160,18 +160,18 @@ export default function CookieJar() {
                 initial={{ opacity: 0, scale: 0.5, y: "-100%", x: "-50%", top: "30%", left: "55%" }}
                 animate={{ opacity: 1, scale: 1, y: "-50%", x: "-50%", top: "50%", left: "50%" }}
                 onAnimationStart={playHeavyDrop}
-                className="absolute w-[85vw] max-w-[340px] h-[180px] z-[15] p-5 flex flex-col justify-between backdrop-blur-3xl rounded-xl shadow-2xl"
+                className="absolute w-[85vw] max-w-[340px] h-[180px] z-[200] p-5 flex flex-col justify-between backdrop-blur-3xl rounded-xl shadow-2xl"
                 style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.06) 100%)', border: '2px solid rgba(255,255,255,0.2)' }}
               >
                  <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-yellow-500/15 flex items-center justify-center border-2 border-yellow-500/40 shadow-[0_0_15px_rgba(234,179,8,0.3)]">
                        <span className="text-[16px] font-mono text-yellow-500 font-bold">?</span>
                     </div>
-                    <span className="block text-[11px] font-bold tracking-widest uppercase">SYSTEM_CORE_LOGS</span>
+                    <span className="block text-[11px] font-semibold tracking-[0.2em] uppercase">SYSTEM_CORE_LOGS</span>
                  </div>
                  <p className="text-[10px] font-mono text-stone-300 leading-relaxed mt-2 p-3 bg-white/5 rounded-md">// ARCHITECTURE: THE_HIVE<br/>// STATUS: S-TIER_SIGNAL</p>
                  <button 
-                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('https://your-dashboard-link.com', '_blank'); }}
+                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('http://127.0.0.1:3000', '_blank'); }}
                   className="mt-4 px-6 py-2.5 bg-yellow-500 text-black text-[10px] font-black uppercase rounded-md self-start"
                  >
                    ACCESS DASHBOARD →
@@ -247,25 +247,27 @@ function Cookie({ data, onFlip, onPortfolioClick, dwellTime }) {
         
         {data.isPortal ? (
           <div className="flex flex-col items-center justify-center w-full h-full">
-            <p className="font-black text-[#D2B48C] text-[1.4vw] mb-[2vh] uppercase tracking-tighter">{data.stats}</p>
+            <p className="font-semibold text-[#E7C89A] text-[1.35vw] mb-[2vh] uppercase tracking-tight">{data.stats}</p>
             <motion.button
               animate={{ 
                 backgroundColor: isSovereignActive ? '#800000' : '#C5A059',
                 color: isSovereignActive ? '#FCD34D' : '#000000', // Yellow text for maroon background
                 boxShadow: isSovereignActive ? '0 0 20px rgba(212,179,117,0.6)' : '0 0 0px rgba(0,0,0,0)'
               }}
-              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('https://your-portfolio.com', '_blank'); }}
+              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('http://127.0.0.1:3000/portfolio', '_blank'); }}
               className="px-[4vw] py-[2vh] rounded-full text-[10px] font-black uppercase border-2 border-[#D4B375] transition-all duration-1000"
             >
               PORTFOLIO →
             </motion.button>
-            <h4 className="font-bold uppercase mt-[2.5vh] opacity-90">{data.title}</h4>
+            <h4 className="font-semibold uppercase mt-[2.5vh] opacity-90 tracking-wide">{data.title}</h4>
           </div>
         ) : (
           <>
-            <p className="font-black text-[#D2B48C] text-[1.4vw] mb-[2vh]">{data.stats}</p>
-            <div className="h-[1px] w-[30%] bg-white/10 mb-[2.5vh] rounded-full" />
-            <h4 className="font-bold text-[1.4vw] uppercase">{data.title}</h4>
+            <>
+              <p className="font-semibold text-[#E7C89A] text-[1.35vw] mb-[2vh] tracking-tight">{data.stats}</p>
+              <div className="h-[1px] w-[30%] bg-white/10 mb-[2.5vh] rounded-full" />
+              <h4 className="font-semibold text-[1.35vw] uppercase tracking-wide">{data.title}</h4>
+            </>
           </>
         )}
       </div>

@@ -51,10 +51,10 @@ The jar does not play random sounds. It follows a structured path:
 The jar is currently populated with seven high-signal cookies:
 
 - **Token Heist**  
-  `2.7M Tokens • $60/Day saved`
+  `4 Projects • 2.7M Tokens • RESITRCTED by Gemini Free API key page`
 
 - **Science Olympiad**  
-  `🥇 Multiple Golds • 12+ Medals`
+  `🥇 Multiple Golds • 16+ Medals`
 
 - **Oski Sorting Trash Can**  
   `CAD • Arduino • 3D Printing • IoT`
