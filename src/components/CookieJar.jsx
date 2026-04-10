@@ -171,11 +171,12 @@ export default function CookieJar() {
                  </div>
                  <p className="text-[10px] font-mono text-stone-300 leading-relaxed mt-2 p-3 bg-white/5 rounded-md">// ARCHITECTURE: THE_HIVE<br/>// STATUS: S-TIER_SIGNAL</p>
                  <button 
-                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('http://127.0.0.1:3000', '_blank'); }}
+                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('https://vivianyang-eosin.vercel.app/', '_blank'); }}
                   className="mt-4 px-6 py-2.5 bg-yellow-500 text-black text-[10px] font-black uppercase rounded-md self-start"
                  >
                    ACCESS DASHBOARD →
                  </button>
+            
               </motion.div>
             )}
           </AnimatePresence>
@@ -254,7 +255,7 @@ function Cookie({ data, onFlip, onPortfolioClick, dwellTime }) {
                 color: isSovereignActive ? '#FCD34D' : '#000000', // Yellow text for maroon background
                 boxShadow: isSovereignActive ? '0 0 20px rgba(212,179,117,0.6)' : '0 0 0px rgba(0,0,0,0)'
               }}
-              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('http://127.0.0.1:3000/portfolio', '_blank'); }}
+              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('https://vivianyang-eosin.vercel.app/', '_blank'); }}
               className="px-[4vw] py-[2vh] rounded-full text-[10px] font-black uppercase border-2 border-[#D4B375] transition-all duration-1000"
             >
               PORTFOLIO →
