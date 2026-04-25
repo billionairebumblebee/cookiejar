@@ -171,7 +171,7 @@ export default function CookieJar() {
                  </div>
                  <p className="text-[10px] font-mono text-stone-300 leading-relaxed mt-2 p-3 bg-white/5 rounded-md">// ARCHITECTURE: THE_HIVE<br/>// STATUS: S-TIER_SIGNAL</p>
                  <button 
-                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('https://vivianyang-eosin.vercel.app/', '_blank'); }}
+                  onClick={(e) => { e.stopPropagation(); playDashboardSparkle(); window.open('https://cloak-site-sigma.vercel.app/', '_blank'); }}
                   className="mt-4 px-6 py-2.5 bg-yellow-500 text-black text-[10px] font-black uppercase rounded-md self-start"
                  >
                    ACCESS DASHBOARD →
