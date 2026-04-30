@@ -86,7 +86,7 @@ const initialCookies = [
   { id: 'sci', title: 'SCIENCE OLYMPIAD', stats: '🥇 Multiple Golds • 12+ Medals', backColor: '#1A0F05', startX: "75%", startY: "25%" },
   { id: 'oski', title: 'OSKI SORTING TRASH CAN', stats: 'CAD • Arduino • 3D Printing • IoT', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
   { id: 'content', title: '@vivian.yan6', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
-  { id: 'foozi', title: 'FOOZI / OPENCLAW', stats: 'Built in 2 Weeks • Portfolio Portal', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true }, 
+  { id: 'foozi', title: 'OpenClaw & Hermes Fleets', stats: 'Built in 2 Weeks • Portfolio Portal', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true }, 
   { id: 'pcg', title: 'Piedmont Consulting Group', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
   { id: 'byoglo', title: 'TOKEN HEIST', stats:  '4 Projects • 2.7M Tokens • RESITRCTED by Gemini Free API keys', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
 ];
