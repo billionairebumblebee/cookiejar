@@ -144,11 +144,6 @@ export default function CookieJar() {
            <div className="relative w-full h-[12vh] rounded-t-[4vw] bg-white/10 border-x-[1vw] border-t-[1vw] border-white/40 shadow-2xl backdrop-blur-3xl flex flex-col items-center justify-center px-4">
               <h1 className="text-[5vw] md:text-[4vw] lg:text-[3.5rem] font-semibold tracking-tight uppercase leading-none drop-shadow-2xl">VIVIAN YANG</h1>
               <span className="text-[1.5vw] md:text-[1vw] lg:text-[0.7rem] font-medium tracking-[0.35em] text-stone-300 uppercase mt-[1vh]">Billionaire Bumblebee</span>
-              <div className="mt-[1.2vh] flex flex-wrap items-center justify-center gap-2 text-[0.55rem] md:text-[0.62rem] uppercase tracking-[0.24em] text-stone-200/85">
-                <span className="rounded-full border border-white/20 bg-white/8 px-3 py-1">Spring 2026 refresh</span>
-                <span className="rounded-full border border-amber-300/25 bg-amber-200/10 px-3 py-1">Cookie Jar live</span>
-                <span className="rounded-full border border-fuchsia-300/25 bg-fuchsia-200/10 px-3 py-1">Portfolio sync push</span>
-              </div>
            </div>
         </div>
 
