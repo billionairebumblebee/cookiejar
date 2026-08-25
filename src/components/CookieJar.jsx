@@ -101,11 +101,11 @@ export default function CookieJar() {
   const [zIndexMap, setZIndexMap] = useState({});
   const [topZ, setTopZ] = useState(100);
   const [flippedCookies, setFlippedCookies] = useState(new Set());
+  const [faceUpCookies, setFaceUpCookies] = useState(new Set());
   const [pitchCounter, setPitchCounter] = useState(0);
   const [dwellTime, setDwellTime] = useState(0);
   const [cookieOffsets, setCookieOffsets] = useState({});
   const dragStateRef = useRef(null);
-  const suppressClickRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => setDwellTime(prev => prev + 1), 1000);
@@ -141,14 +141,24 @@ export default function CookieJar() {
     setZIndexMap(prev => ({ ...prev, [id]: topZ + 1 }));
   };
 
+  const toggleCookie = (id) => {
+    setFaceUpCookies(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+    handleFlipLogic(id);
+  };
+
   const handlePointerDown = (event, id) => {
     if (event.button !== 0 && event.pointerType === 'mouse') return;
+    if (event.target instanceof Element && event.target.closest('button, a')) return;
 
     const cookieRect = event.currentTarget.getBoundingClientRect();
     const jarRect = jarRef.current?.getBoundingClientRect();
     const origin = cookieOffsets[id] || { x: 0, y: 0 };
 
-    event.preventDefault();
     event.currentTarget.setPointerCapture(event.pointerId);
     bringToFront(id);
     dragStateRef.current = {
@@ -187,22 +197,11 @@ export default function CookieJar() {
     const drag = dragStateRef.current;
     if (!drag || drag.pointerId !== event.pointerId) return;
 
-    if (drag.moved) {
-      suppressClickRef.current = drag.id;
-      window.setTimeout(() => {
-        if (suppressClickRef.current === drag.id) suppressClickRef.current = null;
-      }, 0);
-    }
+    if (!drag.moved) toggleCookie(drag.id);
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
     dragStateRef.current = null;
-  };
-
-  const shouldSuppressClick = (id) => {
-    if (suppressClickRef.current !== id) return false;
-    suppressClickRef.current = null;
-    return true;
   };
 
   return (
@@ -287,8 +286,7 @@ export default function CookieJar() {
                 <Cookie 
                     data={c} 
                     dwellTime={dwellTime}
-                    onFlip={() => handleFlipLogic(c.id)} 
-                    shouldSuppressClick={() => shouldSuppressClick(c.id)}
+                    isFlipped={faceUpCookies.has(c.id)}
                     onPortfolioClick={() => {
                         const freq = getCurrentFreq(pitchCounter) || 523.25;
                         playSoftMallet(freq); 
@@ -305,8 +303,7 @@ export default function CookieJar() {
   );
 }
 
-function Cookie({ data, onFlip, onPortfolioClick, dwellTime, shouldSuppressClick }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+function Cookie({ data, onPortfolioClick, dwellTime, isFlipped }) {
   const chips = useMemo(() => generateSovereignChips(), []);
   const isSovereignActive = dwellTime > 10;
 
@@ -315,11 +312,6 @@ function Cookie({ data, onFlip, onPortfolioClick, dwellTime, shouldSuppressClick
       className={`w-full h-full relative preserve-3d rounded-full transition-shadow duration-500 cursor-pointer ${data.highlight ? 'shadow-[0_0_5vw_rgba(210,180,140,0.4)]' : 'shadow-[0_4vh_10vh_rgba(0,0,0,0.8)]'}`}
       animate={{ rotateY: isFlipped ? 180 : 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 18 }}
-      onClick={() => {
-        if (shouldSuppressClick()) return;
-        setIsFlipped(!isFlipped);
-        onFlip();
-      }}
     >
       <div className="absolute inset-0 backface-hidden rounded-full border-[1.2vw] border-black/5 bg-[#D2B48C] overflow-hidden">
          <div className="relative w-full h-full">
