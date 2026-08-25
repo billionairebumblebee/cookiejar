@@ -15,10 +15,10 @@ The jar doesn't play random beeps. It follows a strictly programmed harmonic pat
  2. **Phase 2:** Ascends through the **Circle of Fifths** every 7 interactions (G, D, A, E).
  3. **The Ceiling:** Upon hitting the frequency limit, it triggers a **Descending Glissando Reset** to return the user to base frequency—preventing auditory fatigue.
 ## 📊 Punchy Stats (The Content)
-The jar is populated with seven "S-Tier Signal" cookies:
- * **Token Heist:** 2.7M Tokens processed at $0 cost.
- * **The Hive:** 4-Agent orchestration with 0ms perceived latency.
- * **Growth Engine:** Millions of organic views on Instagram.
+The jar is populated with seven "S-Tier Signal" cookies, including:
+ * **Token Maxxing:** 4B tokens per month, 12B lifetime total.
+ * **Cal AI Hacks:** 1st Place Sponsor Prize.
+ * **Cloak:** Interviewed by 4 accelerators and live at [cloak.build](https://cloak.build).
  * **Science Olympiad:** 12+ Gold Medals (Raw Pedigree).
 ## 📥 Installation
 ```bash
@@ -33,8 +33,4 @@ npm run dev
 
 ```
 ### 💡 Why this exists?
-<<<<<<< HEAD
 Standard portfolios are static. **The Cookie Jar** is a test of curiosity. It rewards the user for digging deeper, turning a "recruiter scan" into a "product discovery" session. It proves that as an Architect, I don't just build systems that work—I build systems that **resonate**.
-=======
-Standard portfolios are static. **The Cookie Jar** is a test of curiosity. It rewards the user for digging deeper, turning a "recruiter scan" into a "product discovery" session. It proves that as an Architect, I don't just build systems that work—I build systems that **resonate**.
->>>>>>> fbd0631bb3dc3f9544e51ee05b18f512984617d5

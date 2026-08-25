@@ -2,7 +2,7 @@
 
 ## What this is
 
-The Sovereign Cookie Jar is an interactive portfolio component built for the **Foozi / OpenClaw** world.
+The Sovereign Cookie Jar is an interactive portfolio component built for Vivian Yang's portfolio.
 
 On the surface, it feels playful and a little magical. Underneath, it is a real technical system combining motion, sound, state changes, and layered interaction design. It was built to show the kind of products I like making: memorable, intentional, and genuinely fun to explore.
 
@@ -50,8 +50,8 @@ The jar does not play random sounds. It follows a structured path:
 
 The jar is currently populated with seven high-signal cookies:
 
-- **Token Heist**  
-  `4 Projects • 2.7M Tokens • RESITRCTED by Gemini Free API key page`
+- **Cloak**
+  `Interviewed by 4 Accelerators • Live at cloak.build`
 
 - **Science Olympiad**  
   `🥇 Multiple Golds • 16+ Medals`
@@ -62,14 +62,14 @@ The jar is currently populated with seven high-signal cookies:
 - **Content Creation**  
   `2M+ Reach • 10K+ Typical Reels`
 
-- **Foozi / OpenClaw**  
-  `Built in 2 Weeks • Portfolio Portal`
+- **Token Maxxing**
+  `4B Tokens / Month • 12B Lifetime Total`
 
 - **PCG Startup Projects**  
   `GTM • Onboarding • UX • Startup Ops`
 
-- **ByoGlo**  
-  `Prototype • Packaging • Pricing`
+- **Cal AI Hacks**
+  `1st Place Sponsor Prize • Hackathon Win`
 
 ## 📥 Installation
 
