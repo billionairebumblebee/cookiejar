@@ -51,7 +51,7 @@ The jar does not play random sounds. It follows a structured path:
 The jar is currently populated with seven high-signal cookies:
 
 - **Cloak**
-  `Interviewed by 4 Accelerators • Live at cloak.build`
+  `Consumer Identity Defense • Live at cloak.build`
 
 - **Science Olympiad**  
   `🥇 Multiple Golds • 16+ Medals`

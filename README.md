@@ -18,7 +18,7 @@ The jar doesn't play random beeps. It follows a strictly programmed harmonic pat
 The jar is populated with seven "S-Tier Signal" cookies, including:
  * **Token Maxxing:** 4B tokens per month, 12B lifetime total.
  * **Cal AI Hacks:** 1st Place Sponsor Prize.
- * **Cloak:** Interviewed by 4 accelerators and live at [cloak.build](https://cloak.build).
+ * **Cloak:** Consumer identity defense, live at [cloak.build](https://cloak.build).
  * **Science Olympiad:** 12+ Gold Medals (Raw Pedigree).
 ## 📥 Installation
 ```bash

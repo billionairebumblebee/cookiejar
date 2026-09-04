@@ -87,10 +87,10 @@ const scaleBases = [523.25, 783.99, 1174.66, 1760.00, 2637.02];
 const majorIntervals = [0, 2, 4, 5, 7, 9, 11];
 
 const initialCookies = [
-  { id: 'cloak', title: 'CLOAK', stats: 'Interviewed by 4 Accelerators • Live at cloak.build', backColor: '#2A1B0E', highlight: true, startX: "25%", startY: "25%" },
+  { id: 'cloak', title: 'CLOAK', stats: 'Consumer Identity Defense • Live at cloak.build', backColor: '#2A1B0E', highlight: true, startX: "25%", startY: "25%" },
   { id: 'sci', title: 'SCIENCE OLYMPIAD', stats: '🥇 Multiple Golds • 12+ Medals', backColor: '#1A0F05', startX: "75%", startY: "25%" },
   { id: 'oski', title: 'OSKI SORTING TRASH CAN', stats: 'CAD • Arduino • 3D Printing • IoT', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
-  { id: 'content', title: '@vivian.yan6', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
+  { id: 'content', title: '@vivianbuilds', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
   { id: 'tokens', title: 'TOKEN MAXXING', stats: '4B Tokens / Month • 12B Lifetime Total', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true },
   { id: 'pcg', title: 'Piedmont Consulting Group', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
   { id: 'cal-ai-hacks', title: 'CAL AI HACKS', stats: '1st Place Sponsor Prize • Hackathon Win', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
