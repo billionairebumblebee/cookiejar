@@ -63,7 +63,7 @@ The jar is currently populated with seven high-signal cookies:
   `2M+ Reach • 10K+ Typical Reels`
 
 - **Token Maxxing**
-  `4B Tokens / Month • 12B Lifetime Total`
+  `13.2B Lifetime • 789.8M Peak`
 
 - **PCG Startup Projects**  
   `GTM • Onboarding • UX • Startup Ops`

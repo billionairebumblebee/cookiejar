@@ -91,7 +91,7 @@ const initialCookies = [
   { id: 'sci', title: 'SCIENCE OLYMPIAD', stats: '🥇 Multiple Golds • 12+ Medals', backColor: '#1A0F05', startX: "75%", startY: "25%" },
   { id: 'oski', title: 'OSKI SORTING TRASH CAN', stats: 'CAD • Arduino • 3D Printing • IoT', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
   { id: 'content', title: '@vivianbuilds', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
-  { id: 'tokens', title: 'TOKEN MAXXING', stats: '4B Tokens / Month • 12B Lifetime Total', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true },
+  { id: 'tokens', title: 'TOKEN MAXXING', stats: '13.2B Lifetime • 789.8M Peak', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true },
   { id: 'pcg', title: 'Piedmont Consulting Group', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
   { id: 'cal-ai-hacks', title: 'CAL AI HACKS', stats: '1st Place Sponsor Prize • Hackathon Win', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
 ];

@@ -16,7 +16,7 @@ The jar doesn't play random beeps. It follows a strictly programmed harmonic pat
  3. **The Ceiling:** Upon hitting the frequency limit, it triggers a **Descending Glissando Reset** to return the user to base frequency—preventing auditory fatigue.
 ## 📊 Punchy Stats (The Content)
 The jar is populated with seven "S-Tier Signal" cookies, including:
- * **Token Maxxing:** 4B tokens per month, 12B lifetime total.
+ * **Token Maxxing:** 13.2B lifetime tokens and a 789.8M peak.
  * **Cal AI Hacks:** 1st Place Sponsor Prize.
  * **Cloak:** Consumer identity defense, live at [cloak.build](https://cloak.build).
  * **Science Olympiad:** 12+ Gold Medals (Raw Pedigree).
