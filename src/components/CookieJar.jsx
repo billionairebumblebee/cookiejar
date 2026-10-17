@@ -91,9 +91,11 @@ const initialCookies = [
   { id: 'sci', title: 'SCIENCE OLYMPIAD', stats: '🥇 Multiple Golds • 12+ Medals', backColor: '#1A0F05', startX: "75%", startY: "25%" },
   { id: 'oski', title: 'OSKI SORTING TRASH CAN', stats: 'CAD • Arduino • 3D Printing • IoT', backColor: '#2A1B0E', startX: "20%", startY: "75%" },
   { id: 'content', title: '@vivianbuilds', stats: '2M+ Reach • 10K+ Typical Reels', backColor: '#2A1B0E', startX: "80%", startY: "75%" },
-  { id: 'tokens', title: 'TOKEN MAXXING', stats: '13.2B Lifetime • 789.8M Peak', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true },
+  { id: 'tokens', title: 'TOKEN MAXXING', stats: '18.1B Lifetime · 789.8M Peak · 109-day streak', backColor: '#0F0F0F', startX: "50%", startY: "15%", isPortal: true },
   { id: 'pcg', title: 'Piedmont Consulting Group', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
-  { id: 'cal-ai-hacks', title: 'CAL AI HACKS', stats: '1st Place Sponsor Prize • Hackathon Win', backColor: '#2A1B0E', startX: "55%", startY: "50%" }
+  { id: 'cal-ai-hacks', title: 'STING', descriptor: 'Anti-scam browser extension', stats: '1st Place · Simular Sponsor Prize · Cal AI Hackathon 2026', detail: 'Solo · 24-hour prototype', backColor: '#2A1B0E', startX: "55%", startY: "50%" },
+  { id: 'interaction-club', title: 'Interaction Club', descriptor: 'Small-group friendship dinners', stats: 'Built in 1 week · 36 first-week signups', detail: 'First Berkeley builder dinner · Oct 8, 2026. Reached out to potential company customers.', backColor: '#2A1B0E', startX: "28%", startY: "52%" },
+  { id: 'scet-finalist', title: 'SCET Innovation Intelligence Hackathon', descriptor: 'SF Tech Week · Oct 11, 2026', stats: 'Top-10 Finalist · Week-long Hackathon · Solo Founder', backColor: '#2A1B0E', startX: "76%", startY: "50%" }
 ];
 
 export default function CookieJar() {
@@ -271,6 +273,32 @@ export default function CookieJar() {
                 onPointerMove={handlePointerMove}
                 onPointerUp={finishPointerDrag}
                 onPointerCancel={finishPointerDrag}
+                role="button"
+                tabIndex={0}
+                aria-label={`${c.title}: ${c.descriptor ? `${c.descriptor}. ` : ''}${c.stats}. Press Enter or Space to flip; use arrow keys to move.`}
+                aria-pressed={faceUpCookies.has(c.id)}
+                onKeyDown={(event) => {
+                  if (event.target !== event.currentTarget) return;
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    bringToFront(c.id);
+                    toggleCookie(c.id);
+                  }
+                  const directions = { ArrowLeft: [-12, 0], ArrowRight: [12, 0], ArrowUp: [0, -12], ArrowDown: [0, 12] };
+                  const delta = directions[event.key];
+                  if (!delta || !jarRef.current) return;
+                  event.preventDefault();
+                  const rect = event.currentTarget.getBoundingClientRect();
+                  const bounds = jarRef.current.getBoundingClientRect();
+                  bringToFront(c.id);
+                  setCookieOffsets(prev => {
+                    const origin = prev[c.id] || { x: 0, y: 0 };
+                    return { ...prev, [c.id]: {
+                      x: origin.x + Math.min(bounds.right - rect.right, Math.max(bounds.left - rect.left, delta[0])),
+                      y: origin.y + Math.min(bounds.bottom - rect.bottom, Math.max(bounds.top - rect.top, delta[1]))
+                    } };
+                  });
+                }}
                 className="absolute w-[20vw] h-[20vw] max-w-[280px] max-h-[280px] min-w-[150px] min-h-[150px] cursor-grab active:cursor-grabbing"
                 style={{
                   zIndex: zIndexMap[c.id] || 20 + index,
@@ -328,14 +356,14 @@ function Cookie({ data, onPortfolioClick, dwellTime, isFlipped }) {
         
         {data.isPortal ? (
           <div className="flex flex-col items-center justify-center w-full h-full">
-            <p className="font-semibold text-[#E7C89A] text-[1.35vw] mb-[2vh] uppercase tracking-tight">{data.stats}</p>
+            <p className="font-semibold text-[#E7C89A] text-[clamp(10px,1.2vw,17px)] leading-tight mb-[2vh] uppercase tracking-tight">{data.stats}</p>
             <MotionButton
               animate={{ 
                 backgroundColor: isSovereignActive ? '#800000' : '#C5A059',
                 color: isSovereignActive ? '#FCD34D' : '#000000', // Yellow text for maroon background
                 boxShadow: isSovereignActive ? '0 0 20px rgba(212,179,117,0.6)' : '0 0 0px rgba(0,0,0,0)'
               }}
-              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('https://vivianyang-eosin.vercel.app/', '_blank'); }}
+              onClick={(e) => { e.stopPropagation(); onPortfolioClick(); window.open('https://vivianyang.vercel.app/', '_blank', 'noopener,noreferrer'); }}
               className="px-[4vw] py-[2vh] rounded-full text-[10px] font-black uppercase border-2 border-[#D4B375] transition-all duration-1000"
             >
               PORTFOLIO →
@@ -345,9 +373,11 @@ function Cookie({ data, onPortfolioClick, dwellTime, isFlipped }) {
         ) : (
           <>
             <>
-              <p className="font-semibold text-[#E7C89A] text-[1.35vw] mb-[2vh] tracking-tight">{data.stats}</p>
-              <div className="h-[1px] w-[30%] bg-white/10 mb-[2.5vh] rounded-full" />
-              <h4 className="font-semibold text-[1.35vw] uppercase tracking-wide">{data.title}</h4>
+              <h4 className="font-semibold text-[clamp(10px,1.15vw,16px)] leading-tight uppercase tracking-wide">{data.title}</h4>
+              {data.descriptor && <p className="text-[clamp(9px,1vw,14px)] leading-tight mt-1">{data.descriptor}</p>}
+              <div className="h-[1px] w-[30%] bg-white/10 my-2 rounded-full" />
+              <p className="font-semibold text-[#E7C89A] text-[clamp(9px,1vw,14px)] leading-tight tracking-tight">{data.stats}</p>
+              {data.detail && <p className="text-stone-300 text-[clamp(8px,0.8vw,11px)] leading-tight mt-1">{data.detail}</p>}
             </>
           </>
         )}
