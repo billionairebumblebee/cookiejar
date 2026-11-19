@@ -95,6 +95,7 @@ const initialCookies = [
   { id: 'pcg', title: 'Piedmont Consulting Group', stats: 'GTM • Onboarding • UX • Startup Ops', backColor: '#2A1B0E', startX: "40%", startY: "80%" },
   { id: 'cal-ai-hacks', title: 'STING', descriptor: 'Anti-scam browser extension', stats: '1st Place · Simular Sponsor Prize · Cal AI Hackathon 2026', detail: 'Solo · 24-hour prototype', backColor: '#2A1B0E', startX: "55%", startY: "50%" },
   { id: 'interaction-club', title: 'Interaction Club', descriptor: 'Small-group friendship dinners', stats: 'Built in 1 week · 36 first-week signups', detail: 'First Berkeley builder dinner · Oct 8, 2026. Reached out to potential company customers.', backColor: '#2A1B0E', startX: "28%", startY: "52%" },
+  { id: 'animal-jam-values', title: 'Animal Jam Values', descriptor: 'Trade calculator for Classic & Play Wild', stats: '715 visitors and 1,984 page views in 3 days', detail: 'We built and maintain the site. Two TikToks promoting it reached 8K and 9K views.', backColor: '#2A1B0E', startX: "54%", startY: "75%" },
   { id: 'scet-finalist', title: 'SCET Innovation Intelligence Hackathon', descriptor: 'SF Tech Week · Oct 11, 2026', stats: 'Top-10 Finalist · Week-long Hackathon · Solo Founder', backColor: '#2A1B0E', startX: "76%", startY: "50%" }
 ];
 
